@@ -87,3 +87,18 @@ $(document).ready(function() {
 		$(modal).modal('hide');
 	});
 });
+
+/**
+ * Background image
+ */
+document.addEventListener("DOMContentLoaded", function(event) { 
+  var imgBg = document.getElementsByClassName('img-bg');
+  if (imgBg) {
+    for (var i = 0; i < imgBg.length; i++) {
+      var item  = imgBg[i],
+          src   = item.getAttribute('data-src');
+          
+      item.style.backgroundImage = src ? 'url("' + src + '")' : 'https://www.bus.com/assets/camaleon_cms/image-not-found-4a963b95bf081c3ea02923dceaeb3f8085e1a654fc54840aac61a57a60903fef.png';
+    }
+  }
+});
