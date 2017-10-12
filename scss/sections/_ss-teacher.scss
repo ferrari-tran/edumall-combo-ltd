@@ -3,6 +3,10 @@
 	.ss-teacher-thumb {
 		border: solid 5px $primary-color-light;
 		margin-bottom: $spacing-normal;
+		width: 130px;
+		@include breakpoint(768, min) {
+			width: 178px;
+		}
 	}
 }
 
@@ -21,12 +25,12 @@
 		width: 100%;
 		height: 3px;
 		background: $primary-color;
-		top: 123px;
+		top: 118px;
 		left: 0;
 		z-index: -1;
 	}
 	.ss-timeline-period {
-		padding: 15px;
+		padding: 10px;
 		.period-text-top {
 			height: 70px;
 			margin-bottom: $spacing-large;

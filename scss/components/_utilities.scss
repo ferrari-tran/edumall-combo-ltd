@@ -6,6 +6,9 @@ a {
 	padding-left: 0;
 	margin-bottom: 0;
 }
+.transition {
+	transition: all 0.3s ease-in-out;
+}
 
 /**
  * Section style
@@ -13,4 +16,24 @@ a {
 .ss-padding {
 	padding-top: $spacing-large;
 	padding-bottom: $spacing-large;
+}
+
+/**
+ * Button
+ */
+.btn {
+	@extend .transition;
+	font-weight: 300;
+	border-radius: 0;
+	padding: 10px 24px;
+}
+.btn-primary-outline {
+	border: solid 1px $primary-color;
+	color: $primary-color;
+	background: transparent;
+	text-transform: uppercase;
+	&:hover, &:focus{
+		background: $primary-color !important;
+		color: #fff;
+	}
 }

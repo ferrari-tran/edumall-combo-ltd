@@ -1,0 +1,13 @@
+.post {
+	text-align: center;
+	margin-bottom: $spacing-normal;
+	.post-thumb {
+		height: 150px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.tuky {
+		margin-top: -28px;
+	}
+}

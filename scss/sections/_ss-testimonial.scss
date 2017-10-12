@@ -1,0 +1,30 @@
+.ss-testimonial {
+	background: $gray-light;
+	.testimonial {
+		font-weight: 300;
+		.testimonial-thumb {
+			border: solid 2px #fff;
+			margin-bottom: $spacing-small;
+		}
+		.testimonial-text {
+			position: relative;
+			z-index: 0;
+			margin-top: $spacing-extra-small;
+			font-weight: 300;
+			padding: 15px;
+			&::before {
+				content: '';
+				position: absolute;
+				width: 34px;
+				height: 23px;
+				background-image: url('../images/quote-min.png');
+				background-repeat: no-repeat;
+				background-size: 100% auto;
+				background-position: center;
+				top: -15px;
+				left: -10px;
+				z-index: 1;
+			}
+		}
+	}
+}
