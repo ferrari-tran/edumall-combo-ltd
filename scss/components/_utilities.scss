@@ -1,0 +1,16 @@
+a {
+	color: $highlight-color;
+}
+.reset-ul {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+}
+
+/**
+ * Section style
+ */
+.ss-padding {
+	padding-top: $spacing-large;
+	padding-bottom: $spacing-large;
+}

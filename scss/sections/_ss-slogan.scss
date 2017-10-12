@@ -1,0 +1,36 @@
+.ss-slogan
+{
+    font-size: 14px;
+
+    padding: $spacing-small;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #fff;
+    background: $primary-color;
+
+    h3
+    {
+        line-height: 1.5;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    @include breakpoint(768, min)
+    {
+        h3
+        {
+            font-size: 20px;
+        }
+    }
+    @include breakpoint(992, min)
+    {
+        padding: $spacing-normal;
+        h3
+        {
+            font-size: 28px;
+        }
+    }
+
+}

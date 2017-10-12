@@ -1,0 +1,12 @@
+.page-wrapper
+{
+	overflow: hidden;
+}
+body
+{
+	font-family: 'Lato', sans-serif;
+	color: $text-color-lighter;
+
+	-webkit-font-smoothing: anitialized;
+	-moz-osx-font-smoothing: grayscale;
+}
