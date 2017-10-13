@@ -10,13 +10,6 @@
     color: #fff;
     background: $primary-color;
 
-    h3
-    {
-        line-height: 1.5;
-        font-weight: 400;
-        font-size: 16px;
-    }
-
     @include breakpoint(768, min)
     {
         h3
@@ -33,4 +26,10 @@
         }
     }
 
+    h3
+    {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+    }
 }

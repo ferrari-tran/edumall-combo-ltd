@@ -12,10 +12,13 @@
 /**
  * Pages
  */
+@import 'sections/ss-header';
 @import 'sections/ss-teacher';
+@import 'sections/ss-package';
 @import 'sections/ss-about';
 @import 'sections/ss-slogan';
 @import 'sections/ss-courses';
+@import 'sections/ss-register';
 @import 'sections/ss-testimonial';
 @import 'sections/ss-post';
 @import 'sections/ss-footer';

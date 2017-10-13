@@ -15,9 +15,59 @@
   </head>
   <body>
     <div class="page-wrapper">
-      <header class="page-header">
-        header
+
+      <nav class="navbar fixed-top navbar-expand-lg navbar-inverse navbar-top">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="images/Logo edumall-min.png" height="40"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav navbar-rainbow ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Về thấy</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Giá combo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Lợi ích khoá combo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Khoá khác</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Về Edumall</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <header class="page-header" id="page-header">
+        <div id="carouselTop" class="carousel slide carousel-top" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselTop" data-slide-to="0" class="active"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item d-flex align-items-center active img-bg" data-src="images/Landing-page-TO_01-min.jpg">
+              <div class="carousel-block w-100">
+                <div class="container">
+                  <img src="images/title-min.png" alt="title" class="img-fluid">
+                  <p><a href="#" class="btn btn-primary mt-4 mt-md-5 btn-scroll">Đăng ký ngay</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img src="images/iPhone-min.png" class="header-symbol" alt="iphone">
       </header>
+      <!-- End #page-header -->
 
       <main class="page-main">
 
@@ -56,6 +106,34 @@
           </div>
         </section>
         <!-- End #ss-teacher -->
+
+        <section class="ss-package" id="ss-package">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xl-5 col-lg-6">
+                <div class="row">
+                  <div class="col-md-6">
+                    left 1
+                  </div>
+                  <div class="col-md-6">
+                    left 2
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-7 col-lg-6">
+                <div class="row">
+                  <div class="col-md-6">
+                    right 1
+                  </div>
+                  <div class="col-md-6">
+                    right 2
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End #ss-package -->
 
         <section class="ss-slogan" id="ss-slogan">
           <div class="container">
@@ -245,6 +323,48 @@
           </div>
         </section>
         <!-- End #ss-about -->
+
+        <section class="ss-register ss-padding" id="ss-register">
+          <div class="container">
+            <h2 class="ss-title">Đăng Ký Khóa Học Và Nhận Tư Vấn Phù Hợp</h2>
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <form class="ss-form">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Tên (*)">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Số điện thoại (*)">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <select class="form-control">
+                          <option value="">COMBO bạn chọn (*)</option>
+                          <option value="Combo 1">Combo 1</option>
+                          <option value="Combo 2">Combo 2</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Nội dung cần tư vấn của bạn">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button class="btn btn-primary btn-register">Đăng ký ngay</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End #ss-register -->
 
         <section class="ss-testimonial ss-padding" id="ss-testimonial">
           <div class="container">

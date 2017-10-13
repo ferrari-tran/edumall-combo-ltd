@@ -1,0 +1,84 @@
+.carousel-top {
+	.carousel-item {
+		min-height: 100vh;
+		color: #fff;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+}
+
+.page-header {
+	position: relative;
+	z-index: 0;
+	.header-symbol {
+		position: absolute;
+		height: 100%;
+		width: auto;
+		top: 15%;
+		right: calc(50% - 530px);
+		z-index: 1;
+		@include breakpoint(1199, max) {
+			display: none;
+		}
+		
+		@include breakpoint(1200, min) {
+			right: calc(50% - 585px);
+		}
+		@include breakpoint(1400, min) {
+			right: calc(50% - 785px);
+		}
+	}
+}
+
+.navbar-top {
+	background: rgba(0,0,0,0.5);
+	@include breakpoint(992, min) {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.navbar-toggler-icon {
+		
+	}
+}
+.navbar-expand-lg .navbar-rainbow {
+	.nav-link {
+		color: #fff;
+		text-transform: uppercase;
+		@extend .transition;
+		&::before {
+			@extend .transition;
+		}
+		@include breakpoint(992, min) {
+			padding: 30px 20px 20px 20px;
+			font-size: 12px;
+			position: relative;
+			z-index: 0;
+			&::before {
+				content: '';
+				width: 100%;
+				height: 10px;
+				top: 0;
+				left: 0;
+				position: absolute;
+				z-index: -1;
+			}
+			&:hover {
+				&::before {
+					padding-top: 25px;
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+@for $i from 1 through length($rainbow-colors) {
+	.navbar-rainbow .nav-item:nth-child(#{$i}) .nav-link::before {
+		background-color: nth($rainbow-colors, $i);
+	}
+}
+
+.navbar-toggler {
+	border-color: $gray;
+}

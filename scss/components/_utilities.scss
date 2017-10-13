@@ -26,6 +26,8 @@ a {
 	font-weight: 300;
 	border-radius: 0;
 	padding: 10px 24px;
+	text-transform: uppercase;
+	cursor: pointer;
 }
 .btn-primary-outline {
 	border: solid 1px $primary-color;
@@ -35,5 +37,12 @@ a {
 	&:hover, &:focus{
 		background: $primary-color !important;
 		color: #fff;
+	}
+}
+.btn-primary {
+	background: $primary-color;
+	border: none;
+	&:hover, &:focus {
+		background: $primary-color-light;
 	}
 }

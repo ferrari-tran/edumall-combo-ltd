@@ -11,28 +11,36 @@
      > li
     {
         margin-bottom: $spacing-normal;
-         > a, button
+         > a,
+        button
         {
             font-weight: 300;
-			cursor: pointer;
+
+            cursor: pointer;
             text-decoration: none;
 
             color: $text-color;
+
             @include breakpoint(768, min)
             {
                 font-size: 18px;
             }
             &:hover
             {
-                .media {
-                	img {
-                		box-shadow: 8px 8px 0px rgba($primary-color,.3);
-                	}
-                	.media-body {
-                		padding-left: $spacing-extra-small;
-                		font-weight: 400;
-                		color: $primary-color;
-                	}
+                .media
+                {
+                    img
+                    {
+                        box-shadow: 8px 8px 0 rgba($primary-color,.3);
+                    }
+                    .media-body
+                    {
+                        font-weight: 400;
+
+                        padding-left: $spacing-extra-small;
+
+                        color: $primary-color;
+                    }
                 }
             }
             .media
@@ -40,98 +48,134 @@
                 padding-right: $spacing-normal;
                 img
                 {
-                	@extend .transition;
                     box-shadow: 5px 5px 0 rgba(0,0,0,.2);
+
+                    @extend .transition;
                 }
-                .media-body {
-                	@extend .transition;
+                .media-body
+                {
+                    @extend .transition;
                 }
             }
         }
     }
 }
 
-.modal-course-details {
-	.modal-content {
-		background-image: url('../images/marketing-fiestas-1-min.jpg');
-    	background-repeat: no-repeat;
-	    background-position: center;
-	    background-size: cover;
-	    padding: 30px;
-	    font-weight: 300;
-	}
+.modal-course-details
+{
+    .modal-content
+    {
+        font-weight: 300;
+
+        padding: 30px;
+
+        background-image: url('../images/marketing-fiestas-1-min.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 }
 
-.nav-carousel-modal {
-	.carousel-thumb {
-		img {
-			width: 100%;
-		}
-	}
-	.carousel-name {
-		display: flex;
-		align-items: flex-end;
-		flex-wrap: wrap;
-		height: 100%;
-		justify-content: flex-start;
-		h3 {
-			color: $primary-color;
-			font-size: 22px;
-			font-weight: 400;
-			margin-top: $spacing-normal;
-			@include breakpoint(992, min) {
-				margin-top: 50px;
-			}
-		}
-	}
+.nav-carousel-modal
+{
+    .carousel-thumb
+    {
+        img
+        {
+            width: 100%;
+        }
+    }
+    .carousel-name
+    {
+        display: flex;
+
+        height: 100%;
+
+        align-items: flex-end;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        h3
+        {
+            font-size: 22px;
+            font-weight: 400;
+
+            margin-top: $spacing-normal;
+
+            color: $primary-color;
+
+            @include breakpoint(992, min)
+            {
+                margin-top: 50px;
+            }
+        }
+    }
 }
 
-.nav-carousel-control {
-	display: flex;
-	width: 30px;
-	height: 30px;
-	justify-content: center;
-	align-items: center;
-	border: solid 2px $gray-light;
-	color: $primary-color;
-	@extend .transition;
-	cursor: pointer;
-	font-size: 20px;
-	position: absolute;
-	z-index: 1;
-	top: 0;
-	.icon::before {
-		vertical-align: middle;
-	}
-	&:hover, &:focus {
-		border-color: $primary-color;
-	}
-	&.left {
-		left: calc(100% / 3 + 10px);
-		.icon {
-			margin-right: 2px;
-		}
-	}
-	&.right {
-		left: calc(100% / 3 + 39px);
-		.icon {
-			margin-left: 2px;
-		}
-	}
-	@include breakpoint(991, max) {
-		border: none;
-		background: #fff;
-		&:hover, &:focus {
-			background: $primary-color;
-			color: #fff;
-		}
-		&.left {
-			top: 10px;
-			left: 10px;
-		}
-		&.right {
-			top: 10px;
-			left: 45px;
-		}
-	}
+.nav-carousel-control
+{
+    font-size: 20px;
+
+    position: absolute;
+    z-index: 1;
+    top: 0;
+
+    display: flex;
+
+    width: 30px;
+    height: 30px;
+
+    cursor: pointer;
+
+    color: $primary-color;
+    border: solid 2px $gray-light;
+
+    justify-content: center;
+    align-items: center;
+    @extend .transition;
+    @include breakpoint(991, max)
+    {
+        border: none;
+        background: #fff;
+        &:hover,
+        &:focus
+        {
+            color: #fff;
+            background: $primary-color;
+        }
+        &.left
+        {
+            top: 10px;
+            left: 10px;
+        }
+        &.right
+        {
+            top: 10px;
+            left: 45px;
+        }
+    }
+    .icon::before
+    {
+        vertical-align: middle;
+    }
+    &:hover,
+    &:focus
+    {
+        border-color: $primary-color;
+    }
+    &.left
+    {
+        left: calc(100% / 3 + 10px);
+        .icon
+        {
+            margin-right: 2px;
+        }
+    }
+    &.right
+    {
+        left: calc(100% / 3 + 39px);
+        .icon
+        {
+            margin-left: 2px;
+        }
+    }
 }

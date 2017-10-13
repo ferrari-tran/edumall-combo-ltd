@@ -1,94 +1,133 @@
-.page-footer {
-  background: $blue-dark;
-  color: $gray-light;
-  font-weight: 300;
-  hr {
-    border-top-color: rgba(#fff, 0.3);
-  }
-  .footer-title {
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-    @include breakpoint(992, min) {
-      margin-bottom: 3.5rem;
+.page-footer
+{
+    font-weight: 300;
+
+    color: $gray-light;
+    background: $blue-dark;
+    hr
+    {
+        border-top-color: rgba(#fff, .3);
     }
-    font-size: 1rem;
-  }
-  .page-info {
-    @include breakpoint(991, max) {
-      margin-bottom: 3.5rem;
-    }
-  }
-  .rainbow {
-    display: flex;
-    @include breakpoint(576, max) {
-      margin-left: -15px;
-      margin-right: -15px;
-    }
-    > li {
-      flex: 0 0 25%;
-      height: 10px;
-      &:nth-child(1) {
-        background-color: nth($rainbow-colors2, 3);
-      }
-      &:nth-child(2) {
-        background-color: nth($rainbow-colors2, 2);
-      }
-      &:nth-child(3) {
-        background-color: nth($rainbow-colors, 3);
-      }
-      &:nth-child(4) {
-        background-color: nth($rainbow-colors, 1);
-      }
-    }
-  }
-}
-.blog-list {
-  list-style: none;
-  padding-left: 0;
-  @include breakpoint(767, max) {
-    margin-bottom: 3rem;
-  }
-  .blog {
-    margin-bottom: 1.25rem;
-    .media {
-      .media-thumb {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 122px;
-        height: 80px;
-        margin-right: 1.25rem;
-      }
-      .media-body {
-        align-self: center;
-      }
-      .blog-title {
+    .footer-title
+    {
+        font-size: 1rem;
+
+        margin-bottom: 2rem;
+
         text-transform: uppercase;
-        color: #fff;
-        font-size: 12px;
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
+
+        @include breakpoint(992, min)
+        {
+            margin-bottom: 3.5rem;
         }
-      }
-      .blog-time {
-        color: $gray;
-        font-style: italic;
-        margin-top: 0.5rem;
-        margin-bottom: 0;
-        font-size: 12px;
-      }
     }
-  }
+    .page-info
+    {
+        @include breakpoint(991, max)
+        {
+            margin-bottom: 3.5rem;
+        }
+    }
+    .rainbow
+    {
+        display: flex;
+
+        @include breakpoint(576, max)
+        {
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+         > li
+        {
+            height: 10px;
+
+            flex: 0 0 25%;
+            &:nth-child(1)
+            {
+                background-color: nth($rainbow-colors2, 3);
+            }
+            &:nth-child(2)
+            {
+                background-color: nth($rainbow-colors2, 2);
+            }
+            &:nth-child(3)
+            {
+                background-color: nth($rainbow-colors, 3);
+            }
+            &:nth-child(4)
+            {
+                background-color: nth($rainbow-colors, 1);
+            }
+        }
+    }
 }
-.download_app {
-  > *:not(:last-child) {
-    padding-right: 1.25rem;
-  }
-  > * {
-    max-width: 50%;
-    img {
-      max-width: 100%;
+.blog-list
+{
+    padding-left: 0;
+
+    list-style: none;
+
+    @include breakpoint(767, max)
+    {
+        margin-bottom: 3rem;
     }
-  }
+    .blog
+    {
+        margin-bottom: 1.25rem;
+        .media
+        {
+            .media-thumb
+            {
+                width: 122px;
+                height: 80px;
+                margin-right: 1.25rem;
+
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .media-body
+            {
+                align-self: center;
+            }
+            .blog-title
+            {
+                font-size: 12px;
+
+                text-decoration: none;
+                text-transform: uppercase;
+
+                color: #fff;
+                &:hover
+                {
+                    text-decoration: underline;
+                }
+            }
+            .blog-time
+            {
+                font-size: 12px;
+                font-style: italic;
+
+                margin-top: .5rem;
+                margin-bottom: 0;
+
+                color: $gray;
+            }
+        }
+    }
+}
+.download_app
+{
+     > *:not(:last-child)
+    {
+        padding-right: 1.25rem;
+    }
+     > *
+    {
+        max-width: 50%;
+        img
+        {
+            max-width: 100%;
+        }
+    }
 }
