@@ -1,10 +1,12 @@
 .carousel-top {
 	.carousel-item {
-		min-height: 100vh;
-		color: #fff;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
+		> div {
+			min-height: 100vh;
+			color: #fff;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
 	}
 }
 
