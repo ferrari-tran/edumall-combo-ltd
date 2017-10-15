@@ -70,7 +70,7 @@ $(document).ready(function() {
 			prevArrow: '<span class="nav-carousel-control left"><i class="icon icon-angle-left"></i></span>',
 			nextArrow: '<span class="nav-carousel-control right"><i class="icon icon-angle-right"></i></span>'
 		};
-		$('.nav-carousel-modal').slick(config);
+		$('.nav-carousel-modal').not('.slick-initialized').slick(config);
 
 		// Slider for
 		var config2 = {
@@ -80,7 +80,13 @@ $(document).ready(function() {
 			arrows: false,
 			asNavFor: '.nav-carousel-modal'
 		};
-		$('.nav-carousel-details').slick(config2);
+		$('.nav-carousel-details').not('.slick-initialized').slick(config2);
+
+		setTimeout(function() {
+			console.log('lsdfjlef');
+			$('.nav-carousel-modal').slick('slickGoTo', courseID - 1);
+			$('.nav-carousel-details').slick('slickGoTo', courseID - 1);
+		}, 10);
 	});
 
 	$('.btn-buy').click(function(e) {
