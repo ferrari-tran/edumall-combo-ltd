@@ -74,10 +74,9 @@ $(document).ready(function() {
 		$('.nav-carousel-details').not('.slick-initialized').slick(config2);
 
 		setTimeout(function() {
-			console.log('lsdfjlef');
 			$('.nav-carousel-modal').slick('slickGoTo', courseID - 1);
 			$('.nav-carousel-details').slick('slickGoTo', courseID - 1);
-		}, 10);
+		}, 1);
 	});
 
 	$('.btn-buy').click(function(e) {
