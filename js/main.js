@@ -184,23 +184,7 @@ $(document).ready(function() {
     }
   });
 });
-/**
- * var api = '//script.google.com/macros/s/AKfycbyQ4mg8TV6V4KUpeJiZQF2KV5n1JZdQtc-Vd6FZq5yQ8W-9uCwz/exec';
-    var jqxhr = $.ajax({
-      url: api,
-      method: "POST",
-      dataType: "json",
-      data: {
-        email: email
-      },
-      success: function(data) {
-        alert('Đăng ký thành công!');
-      },
-      error: function(data) {
-        alert('Lỗi đăng ký!');
-      }
-    });
- */
+
 /**
  * Background image
  */
@@ -214,6 +198,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
       item.style.backgroundImage = src ? 'url("' + src + '")' : 'https://www.bus.com/assets/camaleon_cms/image-not-found-4a963b95bf081c3ea02923dceaeb3f8085e1a654fc54840aac61a57a60903fef.png';
     }
   }
+});
+
+/**
+ * Button register to form
+ */
+$(document).ready(function() {
+	var btnSubmit = $('.btn-register');
+	$(btnSubmit).click(function(e) {
+		e.preventDefault();
+		var combo = $(this).data('combo');
+		if (combo !== undefined) {
+			var secOpt = $('#form-register').find('select[name=combo]');
+			secOpt.val(combo);
+		};
+		$('html, body').animate({
+      scrollTop: $("#form-register").offset().top - 100
+    }, 1000);
+	});
 });
 
 

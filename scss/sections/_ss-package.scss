@@ -10,6 +10,12 @@
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+		@include breakpoint(576, min) {
+			height: 350px;
+		}
+		@include breakpoint(992, min) {
+			height: 400px;
+		}
 		&:nth-child(1), &:nth-child(2) {
 			flex: 0 1 22.5%;
 			@include breakpoint(991, max) {

@@ -43,16 +43,6 @@
 				height: 350px;
 			}
 
-			&.b1 {
-				background-image: url('../images/benefit-1-min.jpg');
-			}
-			&.b2 {
-				background-image: url('../images/benefit-2-min.jpg');
-			}
-			&.b3 {
-				background-image: url('../images/benefit-3-min.jpg');
-			}
-
 			@include breakpoint(767, max) {
 				background-image: none !important ;
 				margin-bottom: $spacing-small;
