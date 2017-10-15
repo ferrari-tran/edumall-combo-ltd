@@ -111,6 +111,97 @@ $(document).ready(function() {
 });
 
 /**
+ * Submit button
+ */
+$(document).ready(function() {
+  var alertBox = $('#alert-box');
+  $(alertBox).hide();
+  
+  var validator = new FormValidator('form-register', [{
+    name: 'name',
+    display: 'Vui lòng điền đầy đủ họ tên!',
+    rules: 'required'
+  }, {
+    name: 'mobile',
+    rules: 'required|min_length[8]',
+    display: 'Số điện thoại chưa đúng định dạng!'
+  }, {
+    name: 'combo',
+    rules: 'required',
+    display: 'Vui lòng chọn combo đăng ký!'
+  }], function(error, event) {
+    if (error.length > 0) {
+      /**
+       * Show message alert in box
+       */
+      var msg = error[0].display;
+      $(alertBox).show().addClass('alert-danger').html(msg);
+    } else {
+    	$('#loading').fadeIn();
+      /**
+       * Check event of button submit
+       */
+      if (event && event.preventDefault()) {
+        event.preventDefault();
+      } else if (event) {
+        event.returnValue = false;
+      }
+      /**
+       * Send form data
+       */
+      var form = $(event.target).closest('form');
+      var inputs = $(form).find('.form-control');
+      var data = {};
+
+      $(inputs).each(function(index, input) {
+        var name = $(input).attr('name');
+        var value = $(input).val();
+        data[name] = value;
+      });
+
+      setTimeout(function() {
+        var api = '//script.google.com/macros/s/AKfycbyQ4mg8TV6V4KUpeJiZQF2KV5n1JZdQtc-Vd6FZq5yQ8W-9uCwz/exec';
+		    var jqxhr = $.ajax({
+		      url: api,
+		      method: "POST",
+		      dataType: "json",
+		      data: {
+		        name: data.name,
+	          mobile: data.mobile,
+	          combo: data.combo,
+	          note: data.note
+		      },
+		      success: function(data) {
+		      	$('#loading').fadeOut(300);
+		        $(alertBox).removeClass('alert-danger').html('Đăng ký thành công!').addClass('alert-success').show();
+		      },
+		      error: function(data) {
+		        alert('Lỗi đăng ký!');
+		      }
+		    });
+
+      }, 300);
+    }
+  });
+});
+/**
+ * var api = '//script.google.com/macros/s/AKfycbyQ4mg8TV6V4KUpeJiZQF2KV5n1JZdQtc-Vd6FZq5yQ8W-9uCwz/exec';
+    var jqxhr = $.ajax({
+      url: api,
+      method: "POST",
+      dataType: "json",
+      data: {
+        email: email
+      },
+      success: function(data) {
+        alert('Đăng ký thành công!');
+      },
+      error: function(data) {
+        alert('Lỗi đăng ký!');
+      }
+    });
+ */
+/**
  * Background image
  */
 document.addEventListener("DOMContentLoaded", function(event) { 

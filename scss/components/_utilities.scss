@@ -19,6 +19,41 @@ a {
 }
 
 /**
+ * loading
+ */
+.loader{
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+svg path,
+svg rect{
+  fill: $primary-color;
+}
+.loading-position {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: 9999999999;
+	top: 0;
+	left: 0;
+}
+.loading {
+	background: rgba(255,255,255, 0.8);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/**
  * Button
  */
 .btn {
