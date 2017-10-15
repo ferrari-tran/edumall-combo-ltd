@@ -1,0 +1,81 @@
+.ss-benefit {
+	background: url('../images/bg-benefit-min.jpg') no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.benefit-carousel {
+	margin-top: $spacing-large;
+	margin-bottom: $spacing-extra-large;
+	.benefit {
+		color: #fff;
+		text-align: center;
+
+		h5 {
+			margin-bottom: $spacing-large;
+		}
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 12px;
+			background: rgba(0,0,0,0.7);
+			height: 70px;
+			width: 100%;
+		}
+		.benefit-block {
+			height: auto;
+			display: flex;
+			align-items: flex-end;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			
+			@include breakpoint(768, min) {
+				height: 210px;
+			}
+
+			@include breakpoint(992, min) {
+				height: 290px;
+			}
+
+			@include breakpoint(1200, min) {
+				height: 350px;
+			}
+
+			&.b1 {
+				background-image: url('../images/benefit-1-min.jpg');
+			}
+			&.b2 {
+				background-image: url('../images/benefit-2-min.jpg');
+			}
+			&.b3 {
+				background-image: url('../images/benefit-3-min.jpg');
+			}
+
+			@include breakpoint(767, max) {
+				background-image: none !important ;
+				margin-bottom: $spacing-small;
+				span {
+					height: auto;
+				}
+			}
+		}
+	}
+
+	.slick-arrow {
+		cursor: pointer;
+		position: absolute;
+		bottom: -60px;
+		height: 20px;
+		&.arrow-prev {
+			left: calc(50% - 40px);
+		}
+		&.arrow-next {
+			right: calc(50% - 40px);
+		}
+		&.slick-disabled {
+			opacity: 0.5;
+		}
+	}
+}

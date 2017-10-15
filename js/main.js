@@ -49,15 +49,6 @@ $(document).ready(function() {
 	$(modal).on('shown.bs.modal', function (e) {
 		var button = $(e.relatedTarget),
 	  		courseID = $(button).data('course');
-
-		// $('.nav-carousel-modal').on('init', function(e, slick) {
-		// 	console.log(this);
-		// 	$(this).slick('slickGoTo', 1);
-		// });
-
-		// $('.nav-carousel-details').on('init', function(e, slick) {
-		// 	$(this).slick('slickGoTo', courseID - 1);
-		// });
 		
 		// Slider nav
 		var config = {
@@ -95,6 +86,31 @@ $(document).ready(function() {
 });
 
 /**
+ * Benefit carousel
+ */
+$(document).ready(function() {
+	var config = {
+		infinite: false,
+		speed: 300,
+		prevArrow: '<img src="images/ic_arrow_left.svg" height="30" class="arrow-prev" />',
+		nextArrow: '<img src="images/ic_arrow_right.svg" height="30" class="arrow-next" />'
+	}
+	$('.benefit-carousel').slick(config);
+});
+
+/**
+ * Dropdown
+ */
+$(document).ready(function() {
+	var navbar = $('.navbar-collapse');
+	var navbarToggle = $(navbar).prev();
+	var navbarItem = $(navbar).find('.nav-item a');
+	$(navbarItem).on('click', function() {
+		$(navbarToggle).trigger('click');
+	});
+});
+
+/**
  * Background image
  */
 document.addEventListener("DOMContentLoaded", function(event) { 
@@ -108,3 +124,43 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   }
 });
+
+
+/**
+ * Smooth scroll
+ */
+$('.btn-scroll')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top - 60
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
